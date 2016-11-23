@@ -1,0 +1,2 @@
+gensim==0.13.3
+python-Levenshtein==0.12.0
