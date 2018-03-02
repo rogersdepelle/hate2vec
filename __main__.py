@@ -3,7 +3,8 @@ import json
 from Levenshtein import ratio, distance
 from gensim.models import Word2Vec
 
-def main():
+
+def get_similarities():
     model = Word2Vec.load_word2vec_format('comments.bin', binary=True)
     badword_list = json.load(open('badword_list.json'))
     vocabulary = json.load(open('vocabulary.json'))
@@ -33,6 +34,15 @@ def main():
 
     for word in similarities:
         print(word + ": " + str(similarities[word]))
+
+
+def get_badwords():
+    print('gg')
+
+
+def main():
+    get_badwords()
+
 
 if __name__ == "__main__":
     main()
